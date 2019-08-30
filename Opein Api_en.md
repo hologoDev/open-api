@@ -1256,7 +1256,7 @@ public class Main {
         params.put("sign", sign);
 
 /** http request */
-        String resultJson = get("https://www.hologo.io//exchange-open-api/open/api/get_trades?symbol=btcusdt", params);
+        String resultJson = get("https://openapi.hologo.io//exchange-open-api/open/api/get_trades?symbol=btcusdt", params);
         System.out.println(resultJson);
     }
 
@@ -1434,7 +1434,7 @@ public class WsTest {
 //Subscribe to real-time data 
             wsc.send(subParam);
 
-//Thread does not end, waiting for new messages，www.hologo.io/ Generally, a new deal will return in about a minute
+//Thread does not end, waiting for new messages，openapi.hologo.io/ Generally, a new deal will return in about a minute
             while (true) {
                 Thread.sleep(1000);
             }

@@ -1,4 +1,4 @@
-### url:www.hologo.io
+### url:openapi.hologo.io
 
 ## 接口地址:api/market
 

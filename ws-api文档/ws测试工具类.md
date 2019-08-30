@@ -52,7 +52,7 @@ WebSocketUtils wsc = WebSocketUtils.executeWebSocket(url, reqParam);            
 //订阅实时数据           <br>
 wsc.send(subParam);                <br>
 
-//线程不结束，等待新的消息，www.hologo.io 一般一分钟左右会有新的成交返回              <br>
+//线程不结束，等待新的消息，openapi.hologo.io 一般一分钟左右会有新的成交返回              <br>
 while (true) {                <br>
 Thread.sleep(1000);                <br>
 }                <br>

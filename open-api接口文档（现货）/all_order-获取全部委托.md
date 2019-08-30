@@ -1,4 +1,4 @@
-### url:www.hologo.io/exchange-open-api
+### url:openapi.hologo.io/exchange-open-api
 
 ## 接口地址:/open/api/v2/all_order
 

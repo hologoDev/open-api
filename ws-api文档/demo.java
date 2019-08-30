@@ -51,7 +51,7 @@ public class WsTest {
 //订阅实时数据 
             wsc.send(subParam);
 
-//线程不结束，等待新的消息，www.hologo.io/ 一般一分钟左右会有新的成交返回
+//线程不结束，等待新的消息，openapi.hologo.io/ 一般一分钟左右会有新的成交返回
             while (true) {
                 Thread.sleep(1000);
             }
