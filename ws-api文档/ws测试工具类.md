@@ -1,4 +1,4 @@
-# ws���Թ����ࣨJava��
+# ws测试工具类（Java）
 
 package test;                <br>
 
@@ -27,8 +27,7 @@ import org.java_websocket.drafts.Draft_17;                <br>
 import org.java_websocket.handshake.ServerHandshake;                <br>
 
 /**                <br>
-\* @author ����� DateTime:2018��11��22�� ����9:25:20                 <br>
-\* ����ʹ�õ�websocket client�汾                <br>
+\*  建议使用的websocket client版本               <br>
 \* \<dependency\>                <br>
 \* \<groupId\>org.java-websocket\</groupId\>                <br>
 \* \<artifactId\>Java-WebSocket\</artifactId\>                <br>
@@ -41,19 +40,19 @@ public class WsTest {                <br>
 public static void main(String[] args) {                <br>
 try {                <br>
 //wsurl                <br>
-String url = "wss://ws.hologo.io/kline-api/ws";                <br>
-//��ʷ�����������                <br>
+String url = "wss://ws.***.com/kline-api/ws";                <br>
+//历史数据请求参数               <br>
 String reqParam = "{\"event\":\"req\",\"params\":{\"channel\":\"market_btcusdt_trade_ticker\",\"cb_id\":\"btcusdt\",\"top\":150}}";                <br>
-//���Ĳ���                <br>
+//订阅参数              <br>
 String subParam = "{\"event\":\"sub\",\"params\":{\"channel\":\"market_btcusdt_trade_ticker\",\"cb_id\":\"btcusdt\",\"top\":150}}";                <br>
 
-//��ʼ��������ʷ����                <br>
+//初始化请求历史数据               <br>
 WebSocketUtils wsc = WebSocketUtils.executeWebSocket(url, reqParam);                <br>
 
-//����ʵʱ����                <br>
+//订阅实时数据           <br>
 wsc.send(subParam);                <br>
 
-//�̲߳��������ȴ��µ���Ϣ��www.hologo.io/ һ��һ�������һ����µĳɽ�����                <br>
+//线程不结束，等待新的消息，www.hologo.io 一般一分钟左右会有新的成交返回              <br>
 while (true) {                <br>
 Thread.sleep(1000);                <br>
 }                <br>
@@ -81,23 +80,23 @@ super(serverUri, new Draft_17(), headers, connecttimeout);                <br>
 
 @Override                <br>
 public void onOpen(ServerHandshake serverHandshake) {                <br>
-System.out.println("�����ѽ���");                <br>
+System.out.println("链接已建立");                <br>
                 <br>
 }                <br>
 
 @Override                <br>
 public void onMessage(String s) {                <br>
-System.out.println("�յ��ַ�����Ϣ");                <br>
+System.out.println("收到字符串消息");                <br>
 }                <br>
 
 @Override                <br>
 public void onClose(int i, String s, boolean b) {                <br>
-System.out.println("�����ѹر�");                <br>
+System.out.println("链接已关闭");                <br>
 }                <br>
 
 @Override                <br>
 public void onError(Exception e) {                <br>
-System.out.println("������");                <br>
+System.out.println("报错啦");                <br>
 }                <br>
 
 @Override                <br>
@@ -106,12 +105,12 @@ try {                <br>
 String marketStr = byteBufferToString(socketBuffer);                <br>
 String market = uncompress(marketStr).toLowerCase();                <br>
 if (market.contains("ping")) {                <br>
-System.out.println("�յ���Ϣping��"+market);                <br>
+System.out.println("收到消息：ping"+market);                <br>
 String tmp = market.replace("ping", "pong");                <br>
 wsclient.send(market.replace("ping", "pong"));                <br>
 } else {                <br>
 msg = market;                <br>
-System.out.println("�յ���Ϣ��"+msg);                <br>
+System.out.println("收到消息："+msg);                <br>
 }                <br>
 } catch (IOException e) {                <br>
 e.printStackTrace();                <br>
@@ -153,7 +152,7 @@ wsclient.send(sendMsg);                <br>
 return wsclient;                <br>
 }                <br>
 
-// buffer תString                <br>
+// buffer 转String               <br>
 public String byteBufferToString(ByteBuffer buffer) {                <br>
 CharBuffer charBuffer = null;                <br>
 try {                <br>
@@ -169,7 +168,7 @@ return null;                <br>
 }                <br>
 
 
-// ��ѹ��                <br>
+// 解压缩               <br>
 public String uncompress(String str) throws IOException {                <br>
 if (str == null || str.length() == 0) {                <br>
 return str;                <br>

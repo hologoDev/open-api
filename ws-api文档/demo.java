@@ -26,7 +26,6 @@ import org.java_websocket.drafts.Draft_17;
 import org.java_websocket.handshake.ServerHandshake;
 
 /**
- * @author 鲫鱼哥 DateTime:2018年11月22日 下午9:25:20 
  * 建议使用的websocket client版本 
  * <dependency> 
  * <groupId>org.java-websocket</groupId> 

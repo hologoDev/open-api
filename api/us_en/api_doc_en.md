@@ -1,6 +1,6 @@
-#  Exchange-official-API-docs
+#  Hologo-official-API-docs
 
-#### Official Documentation for the Exchange APIs and Streams([简体中文版文档](https://github.com/hologoDev/open-api/blob/master/api/zh_cn/api_doc_cn.md))
+#### Hologo Official Documentation for the Exchange APIs and Streams([简体中文版文档](https://github.com/hologoDev/open-api/blob/master/api/zh_cn/api_doc_cn.md))
 - [Introduction](#Introduction)
 - [Getting Started](#startToUse)
 - [Encrypted Verification of API](#a1)
@@ -50,7 +50,7 @@
 
 # <span id="Introduction">Introduction</span>
 
-Welcome to [Exchange](https://www.Exchange.com/index) API document for developers.
+Welcome to [Hologo](https://www.hologo.io) API document for developers.
 
 This file provides the related API application introduction. Open-API includes the port to acquire balance, all orders ,and all transaction record. Ws-API response for the port of K line functions.
 
@@ -72,7 +72,7 @@ Developers are recommended to use REST API to proceed spot trading and withdrawa
 
 ## <span id="a2">Generate an API Key</span>
 
-Before signing any request, you must generate an API key via [Exchange’s official website ](https://www.Exchange.com/index)【User Center】-【API】. After generating the key, there are three things you must bear in mind:
+Before signing any request, you must generate an API key via [Hologo’s official website ](https://www.hologo.io)【User Center】-【API】. After generating the key, there are three things you must bear in mind:
 
 - API Key
  
@@ -111,7 +111,7 @@ sign=md5(api_key1234567time12312312312137789654)
 
 ## <span id="a6">Request Process</span>
 
-The root URL for REST access：``` https://api.Exchange.com ```
+The root URL for REST access：``` https://api.hologo.io ```
 
 ###  <span id="a7">Request</span>
 All requests are based on Https protocol, contentType in the request header must be uniformly set as: ‘application/x-www-form-urlencoded’.

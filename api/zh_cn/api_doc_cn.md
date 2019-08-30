@@ -1,6 +1,6 @@
-#  Exchange官方API文档
+#  Hologo官方API文档
 
-#### Exchange交易所开发文档([English Docs](https://github.com/hologoDev/open-api/blob/master/api/us_en/api_doc_en.md))
+#### Hologo交易所开发文档([English Docs](https://github.com/hologoDev/open-api/blob/master/api/us_en/api_doc_en.md))
 - [介绍](#Introduction)
 - [开始使用](#startToUse)
 - [API接口加密验证](#a1)
@@ -52,7 +52,7 @@
 
 # <span id="Introduction">介绍</span>
 
-欢迎使用交易所开发者文档
+欢迎使用Hologo开发者文档
 
 本文档提供了相关API的使用方法介绍。open-api包含了资产余额，获取全部委托，获取全部成交记录等接口，ws-api则提供了K线相关功能接口。
 
@@ -113,7 +113,7 @@ sign=md5(api_key1234567time12312312312137789654)
 
 ## <span id="a6">请求交互</span>
 
-REST访问的根URL：``` https://openapi.domain.com ```
+REST访问的根URL：``` https://openapi.hologo.io ```
 
 ###  <span id="a7">请求</span>
 所有请求基于Https协议，请求头信息中Content-Type 需要统一设置为:'application/x-www-form-urlencoded’。
