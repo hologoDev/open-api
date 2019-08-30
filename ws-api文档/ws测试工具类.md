@@ -1,4 +1,4 @@
-# ws²âÊÔ¹¤¾ßÀà£¨Java£©
+# wsï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï¿½ï¿½à£¨Javaï¿½ï¿½
 
 package test;                <br>
 
@@ -27,8 +27,8 @@ import org.java_websocket.drafts.Draft_17;                <br>
 import org.java_websocket.handshake.ServerHandshake;                <br>
 
 /**                <br>
-\* @author öêÓã¸ç DateTime:2018Äê11ÔÂ22ÈÕ ÏÂÎç9:25:20                 <br>
-\* ½¨ÒéÊ¹ÓÃµÄwebsocket client°æ±¾                <br>
+\* @author ï¿½ï¿½ï¿½ï¿½ï¿½ DateTime:2018ï¿½ï¿½11ï¿½ï¿½22ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½9:25:20                 <br>
+\* ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½Ãµï¿½websocket clientï¿½æ±¾                <br>
 \* \<dependency\>                <br>
 \* \<groupId\>org.java-websocket\</groupId\>                <br>
 \* \<artifactId\>Java-WebSocket\</artifactId\>                <br>
@@ -41,19 +41,19 @@ public class WsTest {                <br>
 public static void main(String[] args) {                <br>
 try {                <br>
 //wsurl                <br>
-String url = "wss://ws.***.com/kline-api/ws";                <br>
-//ÀúÊ·Êý¾ÝÇëÇó²ÎÊý                <br>
+String url = "wss://ws.hologo.io/kline-api/ws";                <br>
+//ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½                <br>
 String reqParam = "{\"event\":\"req\",\"params\":{\"channel\":\"market_btcusdt_trade_ticker\",\"cb_id\":\"btcusdt\",\"top\":150}}";                <br>
-//¶©ÔÄ²ÎÊý                <br>
+//ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½                <br>
 String subParam = "{\"event\":\"sub\",\"params\":{\"channel\":\"market_btcusdt_trade_ticker\",\"cb_id\":\"btcusdt\",\"top\":150}}";                <br>
 
-//³õÊ¼»¯ÇëÇóÀúÊ·Êý¾Ý                <br>
+//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½                <br>
 WebSocketUtils wsc = WebSocketUtils.executeWebSocket(url, reqParam);                <br>
 
-//¶©ÔÄÊµÊ±Êý¾Ý                <br>
+//ï¿½ï¿½ï¿½ï¿½ÊµÊ±ï¿½ï¿½ï¿½ï¿½                <br>
 wsc.send(subParam);                <br>
 
-//Ïß³Ì²»½áÊø£¬µÈ´ýÐÂµÄÏûÏ¢£¬www.***.com Ò»°ãÒ»·ÖÖÓ×óÓÒ»áÓÐÐÂµÄ³É½»·µ»Ø                <br>
+//ï¿½ß³Ì²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´ï¿½ï¿½Âµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½www.hologo.io/ Ò»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ÂµÄ³É½ï¿½ï¿½ï¿½ï¿½ï¿½                <br>
 while (true) {                <br>
 Thread.sleep(1000);                <br>
 }                <br>
@@ -81,23 +81,23 @@ super(serverUri, new Draft_17(), headers, connecttimeout);                <br>
 
 @Override                <br>
 public void onOpen(ServerHandshake serverHandshake) {                <br>
-System.out.println("Á´½ÓÒÑ½¨Á¢");                <br>
+System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ñ½ï¿½ï¿½ï¿½");                <br>
                 <br>
 }                <br>
 
 @Override                <br>
 public void onMessage(String s) {                <br>
-System.out.println("ÊÕµ½×Ö·û´®ÏûÏ¢");                <br>
+System.out.println("ï¿½Õµï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢");                <br>
 }                <br>
 
 @Override                <br>
 public void onClose(int i, String s, boolean b) {                <br>
-System.out.println("Á´½ÓÒÑ¹Ø±Õ");                <br>
+System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¹Ø±ï¿½");                <br>
 }                <br>
 
 @Override                <br>
 public void onError(Exception e) {                <br>
-System.out.println("±¨´íÀ²");                <br>
+System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");                <br>
 }                <br>
 
 @Override                <br>
@@ -106,12 +106,12 @@ try {                <br>
 String marketStr = byteBufferToString(socketBuffer);                <br>
 String market = uncompress(marketStr).toLowerCase();                <br>
 if (market.contains("ping")) {                <br>
-System.out.println("ÊÕµ½ÏûÏ¢ping£º"+market);                <br>
+System.out.println("ï¿½Õµï¿½ï¿½ï¿½Ï¢pingï¿½ï¿½"+market);                <br>
 String tmp = market.replace("ping", "pong");                <br>
 wsclient.send(market.replace("ping", "pong"));                <br>
 } else {                <br>
 msg = market;                <br>
-System.out.println("ÊÕµ½ÏûÏ¢£º"+msg);                <br>
+System.out.println("ï¿½Õµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½"+msg);                <br>
 }                <br>
 } catch (IOException e) {                <br>
 e.printStackTrace();                <br>
@@ -169,7 +169,7 @@ return null;                <br>
 }                <br>
 
 
-// ½âÑ¹Ëõ                <br>
+// ï¿½ï¿½Ñ¹ï¿½ï¿½                <br>
 public String uncompress(String str) throws IOException {                <br>
 if (str == null || str.length() == 0) {                <br>
 return str;                <br>

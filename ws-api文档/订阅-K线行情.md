@@ -1,28 +1,28 @@
-### url:wss://ws.***.com/kline-api/ws(Àý)
+### url:wss://ws.hologo.io/kline-api/ws(ï¿½ï¿½)
 
-## ¶©ÔÄ-KÏßÐÐÇé
+## ï¿½ï¿½ï¿½ï¿½-Kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-* ÇëÇó:
+* ï¿½ï¿½ï¿½ï¿½:
 ```
-{"event":"sub","params":{"channel":"market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]","cb_id":"×Ô¶¨Òå"}}
+{"event":"sub","params":{"channel":"market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]","cb_id":"ï¿½Ô¶ï¿½ï¿½ï¿½"}}
 ```
-* ·µ»Ø¶©ÔÄ×´Ì¬1´Î:
+* ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½×´Ì¬1ï¿½ï¿½:
 ```
-{"event_rep":"subed","channel":"market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]","cb_id":"Ô­Â··µ»Ø","ts":1506584998239,"status":"ok"}
+{"event_rep":"subed","channel":"market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]","cb_id":"Ô­Â·ï¿½ï¿½ï¿½ï¿½","ts":1506584998239,"status":"ok"}
 ```
-* ³ÖÐø·µ»Ø¶©ÔÄÏûÏ¢:
+* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢:
 ```
 {
-    "channel":"market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]",//¶©ÔÄµÄ½»Ò×¶ÔÐÐÇé$base$quote±íÊ¾btckrwµÈ
-    "ts":1506584998239,//ÇëÇóÊ±¼ä
+    "channel":"market_$base$quote_kline_[1min/5min/15min/30min/60min/1day/1week/1month]",//ï¿½ï¿½ï¿½ÄµÄ½ï¿½ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½$base$quoteï¿½ï¿½Ê¾btckrwï¿½ï¿½
+    "ts":1506584998239,//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
     "tick":{
-        "id":1506602880,//Ê±¼ä¿Ì¶ÈÆðÊ¼Öµ
-        "amount":123.1221,//½»Ò×¶î
-        "vol":1212.12211,//½»Ò×Á¿
-        "open":2233.22,//¿ªÅÌ¼Û
-        "close":1221.11,//ÊÕÅÌ¼Û
-        "high":22322.22,//×î¸ß¼Û
-        "low":2321.22//×îµÍ¼Û
+        "id":1506602880,//Ê±ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½Ê¼Öµ
+        "amount":123.1221,//ï¿½ï¿½ï¿½×¶ï¿½
+        "vol":1212.12211,//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        "open":2233.22,//ï¿½ï¿½ï¿½Ì¼ï¿½
+        "close":1221.11,//ï¿½ï¿½ï¿½Ì¼ï¿½
+        "high":22322.22,//ï¿½ï¿½ß¼ï¿½
+        "low":2321.22//ï¿½ï¿½Í¼ï¿½
     }
 }
 ```

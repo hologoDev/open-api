@@ -1,4 +1,4 @@
-### url:www.***.com(例)
+### url:www.hologo.io
 
 ## 接口地址:/api/transfer_margin
 
